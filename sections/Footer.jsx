@@ -17,7 +17,7 @@ const Footer = () => {
                     <a href="/">
                         {/* <Image src={footerLogo} alt="footerLogo"
                             width={150} height={46} /> */}
-                        <h1 className='text-3xl text-white font-bold'>SneakerHub</h1>
+                        <h1 className='text-3xl text-white font-bold'>PmEnhance</h1>
                     </a>
 
                     <p className="mt-6 test-base leading-7
@@ -35,7 +35,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="flex flex-1 justify-between lg:gap-10 
+                <div className="flex flex-1 justify-between md:gap-10 
                 gap-20 flex-wrap">
                     {footerLinks.map((section) => (
                         <div key={section}>

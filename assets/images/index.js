@@ -23,6 +23,7 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 
 import man from './man.png'
+import course1 from './course1.jpeg'
 
 export {
     bigShoe1,
@@ -47,5 +48,6 @@ export {
     thumbnailShoe2,
     thumbnailShoe3,
 
-    man
+    man,
+    course1
 }

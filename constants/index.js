@@ -1,5 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, course1, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -34,24 +34,24 @@ export const statistics = [
 
 export const products = [
     {
-        imgURL: shoe4,
-        name: "Nike Air Jordan-01",
-        price: "₹10,300",
+        imgURL: course1,
+        name: "Scaled Scrum Master",
+        price: "$150.00",
     },
     {
-        imgURL: shoe5,
-        name: "Nike Air Jordan-10",
-        price: "₹16,110",
+        imgURL: course1,
+        name: "Scrum Fundamentals Certified",
+        price: "$150.00",
     },
     {
-        imgURL: shoe6,
-        name: "Nike Air Jordan-100",
-        price: "₹21,120",
+        imgURL: course1,
+        name: "Scrum Product Owner Certified",
+        price: "$150.00",
     },
     {
-        imgURL: shoe7,
-        name: "Nike Air Jordan-001",
-        price: "₹23,000",
+        imgURL: course1,
+        name: "Scaled Scrum Master",
+        price: "$150.00",
     },
 ];
 
@@ -91,7 +91,7 @@ export const reviews = [
 
 export const footerLinks = [
     {
-        title: "Products",
+        title: "Courses",
         links: [
             { name: "Air Force 1", link: "/" },
             { name: "Air Max 1", link: "/" },
@@ -114,7 +114,7 @@ export const footerLinks = [
     {
         title: "Get in touch",
         links: [
-            { name: "customer@sneakerhub.com", link: "mailto:customer@nike.com" },
+            { name: "customer@pmenhnace.com", link: "mailto:customer@nike.com" },
             { name: "+92554862354", link: "tel:+92554862354" },
         ],
     },

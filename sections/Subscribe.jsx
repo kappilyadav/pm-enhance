@@ -7,7 +7,7 @@ const Subscribe = () => {
         <section className="max-container flex justify-between items-center max-lg:flex-col gap-10" id="contact-us">
 
             <h3 className="text-4xl leading-[68px] lg:max-w-md font-palanquin font-bold">Sign Up for
-                <span className="text-coral-red"> Updated</span> & Newsletter
+                <span className="text-gray-600"> Updated</span> & Newsletter
             </h3>
 
 
@@ -16,12 +16,12 @@ const Subscribe = () => {
             rounded-full">
 
                 <input type="text"
-                    placeholder="subscribe@sneakerhub.com"
+                    placeholder="subscribe@pmenhance.com"
                     className="input" />
 
                 <div className="flex max-sm:justify-start items-center 
                 max-sm:w-full">
-                    <Button label="Sign Up" fullWidth="" />
+                    <Button label="Sign Up" fullWidth="" backgroundColor={"bg-black"} textColor={"text-white"} />
                 </div>
 
             </div>
