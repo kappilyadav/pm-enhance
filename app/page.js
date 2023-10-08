@@ -9,20 +9,20 @@ import Nav from '../components/Nav'
 
 const Home = () => (
   <main className="relative">
-    {/* <Nav />
+    <Nav />
     <section className="xl:padding-l wide:padding-r padding-b">
       <Hero />
     </section>
-    <section className="padding">
+    {/* <section className="padding">
       <PopularProducts />
-    </section> */}
+    </section>
     <section className="padding">
       <SuperQuality />
     </section>
-    {/* <section className="padding-x py-10">
+    <section className="padding-x py-10">
       <Services />
     </section>
-    <section className="padding">
+    <section className="padding">2
       <SpecialOffer />
     </section>
     <section className="bg-pale-blue padding">
