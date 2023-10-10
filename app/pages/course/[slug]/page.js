@@ -1,7 +1,7 @@
 "use client"
 
 import { course1 } from '@/assets/images'
-import CourseDetailsCarousel from '@/components/CourseDetailsCarousel'
+//import CourseDetailsCarousel from '@/components/CourseDetailsCarousel'
 import Image from 'next/image'
 //import RelatedProducts from '@/components/RelatedProducts'
 import React from 'react'
@@ -17,7 +17,7 @@ const page = ({ params }) => {
                 <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
                     {/* <CourseDetailsCarousel /> */}
 
-                    <Image src={course1} height={550} />
+                    <Image src={course1} height={550} alt='course image' />
                 </div>
                 {/* left column end */}
 
@@ -113,7 +113,7 @@ const page = ({ params }) => {
                             Product Details
                         </div>
                         <div className="markdown text-md mb-5">
-                            Be cool. Stay cool. The AJ-6 ""Cool Grey"" lets your style take flight with a colourway rooted to Jordan Brand DNA. MJ wore 'em when he claimed his first championship and you'll be wearing 'em for—well, whatever you want. Laden with sleek features like dynamic design lines and an iced outsole, these sneakers bring speed and class to any 'fit. After all, they were famously inspired by Jordan's (wait for it) COOL sports car. So lace up and let your kicks do the rest.
+                            Be cool. Stay cool. The AJ-6 &quot;&quot;Cool Grey&quot;&quot; lets your style take flight with a colourway rooted to Jordan Brand DNA. MJ wore &apos;em when he claimed his first championship and you&apos;ll be wearing &apos;em for—well, whatever you want. Laden with sleek features like dynamic design lines and an iced outsole, these sneakers bring speed and class to any &apos;fit. After all, they were famously inspired by Jordan&apos;s (wait for it) COOL sports car. So lace up and let your kicks do the rest.
 
                             <br />
                             Colour Shown: White/Cool Grey/Medium Grey Style: CT8529-100

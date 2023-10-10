@@ -80,6 +80,7 @@ const Cart = () => {
                     src={emptyCart}
                     width={300}
                     height={300}
+                    alt='empty cart icon'
                     className="w-[300px] md:w-[400px]"
                 />
                 <span className="text-xl font-bold">

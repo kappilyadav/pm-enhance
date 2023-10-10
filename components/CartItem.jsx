@@ -12,6 +12,7 @@ const CartItem = () => {
                     src={course1}
                     width={120}
                     height={120}
+                    alt='course image'
                 />
             </div>
             {/* IMAGE END */}
