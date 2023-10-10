@@ -24,6 +24,7 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 import man from './man.png'
 import course1 from './course1.jpeg'
+import emptyCart from './empty-cart.jpg'
 
 export {
     bigShoe1,
@@ -49,5 +50,6 @@ export {
     thumbnailShoe3,
 
     man,
-    course1
+    course1,
+    emptyCart
 }
