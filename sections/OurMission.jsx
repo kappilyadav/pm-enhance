@@ -9,8 +9,7 @@ import { BsPatchCheckFill } from "react-icons/bs"
 
 const OurMission = () => {
     return (
-        <section id="about-us"
-            className="flex justify-between lg:items-center
+        <section className="flex justify-between lg:items-center
         max-lg:flex-col gap-10 w-full max-container">
 
             <div className="flex flex-1 flex-col justify-start items-center">

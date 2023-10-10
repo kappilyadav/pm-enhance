@@ -10,7 +10,7 @@ const CourseCard = () => {
     return (
         <Link
             href={`/course/1`}
-            className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
+            className="transform overflow-hidden bg-white duration-200 md:hover:scale-105 cursor-pointer"
         >
             <Image
                 width={500}
