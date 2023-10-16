@@ -1,5 +1,5 @@
 "use client"
-import PopularProductCard from "../components/PopularProductCard"
+import PopularProductCard from "../components/PopularCourseCard"
 import { products } from "../constants"
 
 

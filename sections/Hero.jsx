@@ -8,6 +8,7 @@ import Button from "../components/Button"
 import ShoeCard from "../components/ShoeCard"
 import { shoes, statistics } from "../constants"
 import Image from 'next/image'
+import Link from "next/link"
 
 
 const Hero = () => {
@@ -39,7 +40,7 @@ const Hero = () => {
                 </p> */}
 
                 <div className="mt-14 flex gap-4 max-sm:flex-col">
-                    <Button label="Mentorship" backgroundColor={"bg-black"} textColor={"text-white"} iconURL={arrowRight} />
+                    <Link href={"./courses"}><Button label="Mentorship" backgroundColor={"bg-black"} textColor={"text-white"} iconURL={arrowRight} /></Link>
                     <Button label="Learn more" backgroundColor={"bg-white"} />
                 </div>
 

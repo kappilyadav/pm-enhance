@@ -1,9 +1,9 @@
 "use client"
-import PopularProductCard from "../components/PopularProductCard"
+import PopularCourseCard from "../components/PopularCourseCard"
 import { products } from "../constants"
 
 
-const PopularProducts = () => {
+const PopularCourses = () => {
     return (
         <section className="max-container max-sm:mt-12">
 
@@ -15,11 +15,11 @@ const PopularProducts = () => {
 
             <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-14">
                 {products.map((product) => (
-                    <PopularProductCard key={product.name} {...product} />
+                    <PopularCourseCard key={product.name} {...product} />
                 ))}
             </div>
         </section>
     )
 }
 
-export default PopularProducts
+export default PopularCourses

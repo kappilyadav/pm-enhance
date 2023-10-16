@@ -11,7 +11,7 @@ const Courses = () => {
     return (
         <div className="w-full lg:mt-16 md:mt-12 max-md:mt-28 md:py-20 relative max-w-[1280px] px-5 md:px-10 mx-auto">
             <div className="text-center max-w-[800px] mx-auto mt-8 md:mt-0">
-                <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight">
+                <div className="text-[28px] md:text-[34px] mb-5 font-bold leading-tight">
                     Our Courses
                 </div>
             </div>

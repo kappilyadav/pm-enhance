@@ -12,7 +12,7 @@ const data = [
 const MenuMobile = ({ setMobileMenu }) => {
 
     return (
-        <ul className='flex flex-col lg:hidden font-bold absolute top-[100px] left-0 w-full h-[calc(100vh - 100px)] bg-white border-t
+        <ul className='flex flex-col lg:hidden font-bold absolute max-sm:top-[80px] top-[95px] left-0 w-full bg-white border-t
         text-black'>
             {data.map((item) => {
                 return (

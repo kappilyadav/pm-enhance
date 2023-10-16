@@ -4,11 +4,11 @@ import { star } from "../assets/icons"
 import Image from "next/image"
 
 
-const PopularProductCard = ({ imgURL, name, price }) => {
+const PopularCourseCard = ({ imgURL, name, price }) => {
     return (
         <div className="flex flex-1 flex-col w-full max-sm:w-full">
             <Image src={imgURL} width={''} height={''} alt={name}
-                className="w-[280px] h-[280px] sm:h-auto sm:mt-8 hover:scale-105 duration-300 cursor-pointer" />
+                className="w-[280px] h-[280px] sm:h-auto sm:mt-8 md:hover:scale-105 md:duration-300 cursor-pointer" />
 
             <div className="mt-8 flex justify-start gap-2.5">
                 <Image src={star} alt="rating" width={24} height={24} />
@@ -21,4 +21,4 @@ const PopularProductCard = ({ imgURL, name, price }) => {
     )
 }
 
-export default PopularProductCard
+export default PopularCourseCard
