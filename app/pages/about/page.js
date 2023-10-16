@@ -97,7 +97,7 @@ const About = () => {
                     Join Us on the Journey
                 </div>
                 <div className="text-base mt-7">
-                    At PmEnhance, we invite you to embark on a journey of self-discovery and professional advancement. Whether you're an individual looking to enhance your skills or an organization seeking to empower your workforce, we are here to support you every step of the way.
+                    At PmEnhance, we invite you to embark on a journey of self-discovery and professional advancement. Whether you&apos;re an individual looking to enhance your skills or an organization seeking to empower your workforce, we are here to support you every step of the way.
                 </div>
                 <div className="text-base mt-5 mb-5">
                     Contact us today to explore how we can work together to unlock your true potential in the corporate world.
