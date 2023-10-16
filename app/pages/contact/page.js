@@ -7,7 +7,7 @@ const Contact = () => {
 
             <div className="max-w-[600px] rounded-lg p-5 border border-black mx-auto flex flex-col">
                 <div className="text-2xl font-bold">
-                    Do you've any query?
+                    Do you&apos;ve any query?
                 </div>
                 <div className="text-lg font-bold mt-2">
                     Your can contact us on below mentioned modes.

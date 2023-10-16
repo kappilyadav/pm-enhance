@@ -13,7 +13,7 @@ const About = () => {
                     Our Vision
                 </div>
                 <div className="text-base mt-7">
-                    At PmEnhance, we envision a corporate landscape where employees are not only skilled but also empowered, where personal development is the cornerstone of professional success. We believe that nurturing the individual's character and skills leads to better leaders, innovative teams, and thriving organizations.
+                    At PmEnhance, we envision a corporate landscape where employees are not only skilled but also empowered, where personal development is the cornerstone of professional success. We believe that nurturing the individual&apos;s character and skills leads to better leaders, innovative teams, and thriving organizations.
                 </div>
 
                 <div className="text-xl font-bold mt-12">
@@ -28,7 +28,7 @@ const About = () => {
                 </div>
                 <div className="text-base mt-7">
                     <p>
-                        At PmEnhance, we envision a corporate landscape where employees are not only skilled but also empowered, where personal development is the cornerstone of professional success. We believe that nurturing the individual's character and skills leads to better leaders, innovative teams, and thriving organizations.
+                        At PmEnhance, we specialize in tailoring transformative programs and coaching services designed exclusively for the corporate world. We offer a comprehensive range of services, including:
                     </p>
 
                     <br />
