@@ -9,7 +9,7 @@ course1
 const CourseCard = () => {
     return (
         <Link
-            href={`/course/1`}
+            href={`/pages/course/1`}
             className="transform overflow-hidden bg-white duration-200 md:hover:scale-105 cursor-pointer"
         >
             <Image

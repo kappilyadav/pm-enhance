@@ -32,16 +32,10 @@ const Hero = () => {
                     <span className="text-gray-500"> Growth</span>
                 </h1>
 
-                {/* <p className="font-montserrat text-slate-gray 
-                text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
-                    Discover stylish Nike arrivals, quality
-                    comfort, and innovation for your
-                    active life.
-                </p> */}
 
                 <div className="mt-14 flex gap-4 max-sm:flex-col">
                     <Link href={"./courses"}><Button label="Mentorship" backgroundColor={"bg-black"} textColor={"text-white"} iconURL={arrowRight} /></Link>
-                    <Button label="Learn more" backgroundColor={"bg-white"} />
+                    <Link href={"./pages/about"}><Button label="Learn more" backgroundColor={"bg-white"} /></Link>
                 </div>
 
 
@@ -62,20 +56,6 @@ const Hero = () => {
                 <Image src={bigShoeImg} alt="Shoe collection"
                     className="object-contain lg:scale-110" />
 
-
-                {/* <div className="flex sm:gap-6 gap-4 absolute 
-                -bottom-[5%] sm:left-[10%] max-sm:px-6">
-
-                    {shoes.map((shoe) => (
-                        <div key={shoe.id}>
-                            <ShoeCard imgURL={shoe}
-                                changeBigShoeImage={(shoe) => {
-                                    setBigShoeImg(shoe)
-                                }}
-                                bigShoeImg={bigShoeImg} />
-                        </div>
-                    ))}
-                </div> */}
             </div>
         </section >
     )

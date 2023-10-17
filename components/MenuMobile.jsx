@@ -3,8 +3,8 @@ import React from 'react'
 
 const data = [
     { id: 1, name: "Home", url: "/" },
-    { id: 2, name: "About", url: "/pages/about" },
     { id: 3, name: "Courses", url: "/courses" },
+    { id: 2, name: "About", url: "/pages/about" },
     { id: 4, name: "Contact", url: "/pages/contact" },
 ];
 

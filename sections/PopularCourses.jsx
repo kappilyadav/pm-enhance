@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import PopularCourseCard from "../components/PopularCourseCard"
 import { products } from "../constants"
 
@@ -15,7 +16,9 @@ const PopularCourses = () => {
 
             <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-14">
                 {products.map((product) => (
-                    <PopularCourseCard key={product.name} {...product} />
+                    <Link href={"/pages/course/1"} key={product.name}>
+                        <PopularCourseCard {...product} />
+                    </Link>
                 ))}
             </div>
         </section>

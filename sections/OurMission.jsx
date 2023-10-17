@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { shoe8 } from "../assets/images"
 import Button from "../components/Button"
 import Image from "next/image"
@@ -26,7 +27,7 @@ const OurMission = () => {
                         quality, innovation, and a touch of elegance.
                     </p>
 
-                    <div className="lg:mt-11 mt-6"><Button label="View details" backgroundColor={"bg-black"} textColor={"text-white"} /></div>
+                    <div className="lg:mt-11 mt-6"><Link href="/pages/about"><Button label="View details" backgroundColor={"bg-black"} textColor={"text-white"} /></Link></div>
                 </div>
             </div>
 
