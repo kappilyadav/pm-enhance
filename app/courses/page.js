@@ -1,12 +1,26 @@
 "use client"
 
 import CourseCard from '@/components/CourseCard'
-import React from 'react'
+import { fetchDataFromApi } from '@/utils/api'
+import React, { useEffect, useState } from 'react'
+
 
 
 const Courses = () => {
 
-    //console.log(params);
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchCourses();
+    }, [])
+
+
+    const fetchCourses = async () => {
+        const courses = await fetchDataFromApi(`/api/courses?populate=*`);
+
+        setData({ ...courses });
+    }
+
 
     return (
         <div className="w-full lg:mt-16 md:mt-12 max-md:mt-28 md:py-20 relative max-w-[1280px] px-5 md:px-10 mx-auto">
@@ -19,15 +33,19 @@ const Courses = () => {
             {/* products grid start */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-14 px-5 md:px-0">
 
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
-                <CourseCard />
+                {data?.data.map((course) => {
+                    return (
+                        <>
+                            <CourseCard key={course.id} data={course} />
+                            <CourseCard key={course.id} data={course} />
+                            <CourseCard key={course.id} data={course} />
+                            <CourseCard key={course.id} data={course} />
+                            <CourseCard key={course.id} data={course} />
+                            <CourseCard key={course.id} data={course} />
+                        </>
+                    )
+                })}
+
             </div>
             {/* products grid end */}
         </div>

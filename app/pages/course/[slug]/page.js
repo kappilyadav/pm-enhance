@@ -1,58 +1,74 @@
 "use client"
 
 import { course1 } from '@/assets/images'
+import { fetchDataFromApi } from '@/utils/api'
 //import CourseDetailsCarousel from '@/components/CourseDetailsCarousel'
 import Image from 'next/image'
 //import RelatedProducts from '@/components/RelatedProducts'
-import React from 'react'
-import { IoMdHeartEmpty } from 'react-icons/io'
+import React, { useEffect, useState } from 'react'
 
 
-const Course = ({ params }) => {
+const CourseDetails = ({ params }) => {
+
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchCourseDetails();
+    }, [])
+
+
+    const fetchCourseDetails = async () => {
+        const course = await fetchDataFromApi(`/api/courses?populate=*&[filters][slug][$eq]=${params.slug}`);
+
+        setData({ ...course });
+    }
+
+
     return (
         <div className="w-full mt-28 md:py-20 max-w-[1280px] px-5 md:px-10 mx-auto">
 
-            <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
-                {/* left column start */}
-                <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
-                    {/* <CourseDetailsCarousel /> */}
+            {data && (
+                <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
+                    {/* left column start */}
+                    <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
+                        {/* <CourseDetailsCarousel /> */}
 
-                    <Image src={course1} height={550} alt='course image' />
-                </div>
-                {/* left column end */}
-
-                {/* right column start */}
-                <div className="flex-[1] py-3">
-                    {/* PRODUCT TITLE */}
-                    <div className="text-[34px] font-semibold mb-2 leading-tight">
-                        Scaled Scrum Master Certified Course
+                        <Image src={course1} height={550} alt={data.data[0].attributes.name} />
                     </div>
+                    {/* left column end */}
 
-                    {/* PRODUCT SUBTITLE */}
-                    <div className="text-lg font-semibold mb-5">
-                        Sacled Scrum Certification
-                    </div>
+                    {/* right column start */}
+                    <div className="flex-[1] py-3">
+                        {/* PRODUCT TITLE */}
+                        <div className="text-[34px] font-semibold mb-2 leading-tight">
+                            {data.data[0].attributes.name}
+                        </div>
 
-                    {/* PRODUCT PRICE */}
-                    <div className="flex items-center">
-                        <p className="mr-2 text-lg text-coral-red font-semibold">
-                            MRP : &#8377;19,695.00
-                        </p>
+                        {/* PRODUCT SUBTITLE */}
+                        <div className="text-lg font-semibold mb-5">
+                            {data.data[0].attributes.subname}
+                        </div>
 
-                    </div>
+                        {/* PRODUCT PRICE */}
+                        <div className="flex items-center">
+                            <p className="mr-2 text-lg text-coral-red font-semibold">
+                                MRP : ${data.data[0].attributes.price}
+                            </p>
 
-                    <div className="text-md font-medium text-black/[0.5]">
-                        incl. of taxes
-                    </div>
-                    <div className="text-md font-medium text-black/[0.5] mb-12">
-                        {`(Also includes all applicable duties)`}
-                    </div>
+                        </div>
 
-                    {/* PRODUCT SIZE RANGE START */}
+                        <div className="text-md font-medium text-black/[0.5]">
+                            incl. of taxes
+                        </div>
+                        <div className="text-md font-medium text-black/[0.5] mb-12">
+                            {`(Also includes all applicable duties)`}
+                        </div>
 
-                    <div className="mb-10">
-                        {/* HEADING START */}
-                        {/* <div className="flex justify-between mb-2">
+                        {/* PRODUCT SIZE RANGE START */}
+
+                        <div className="mb-10">
+                            {/* HEADING START */}
+                            {/* <div className="flex justify-between mb-2">
                             <div className="text-md font-semibold">
                                 Select Size
                             </div>
@@ -60,10 +76,10 @@ const Course = ({ params }) => {
                                 Select Guide
                             </div>
                         </div> */}
-                        {/* HEADING END */}
+                            {/* HEADING END */}
 
-                        {/* SIZE START */}
-                        {/* <div id="sizesGrid" className="grid grid-cols-3 gap-2" >
+                            {/* SIZE START */}
+                            {/* <div id="sizesGrid" className="grid grid-cols-3 gap-2" >
                             <div className='border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer'>
                                 UK 6
                             </div>
@@ -80,49 +96,50 @@ const Course = ({ params }) => {
                                 UK 10
                             </div>
                         </div> */}
-                        {/* SIZE END */}
+                            {/* SIZE END */}
 
-                        {/* SHOW ERROR START */}
+                            {/* SHOW ERROR START */}
 
-                        {/* <div className="text-red-600 mt-1">
+                            {/* <div className="text-red-600 mt-1">
                             Size selection is required
                         </div> */}
 
-                        {/* SHOW ERROR END */}
-                    </div>
+                            {/* SHOW ERROR END */}
+                        </div>
 
-                    {/* PRODUCT SIZE RANGE END */}
+                        {/* PRODUCT SIZE RANGE END */}
 
 
-                    {/* ADD TO CART BUTTON START */}
-                    <button
-                        className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
-                    >
-                        Add to cart
-                    </button>
-                    {/* ADD TO CART BUTTON END */}
+                        {/* ADD TO CART BUTTON START */}
+                        <button
+                            className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+                        >
+                            Add to cart
+                        </button>
+                        {/* ADD TO CART BUTTON END */}
 
-                    {/* WHISHLIST BUTTON START */}
-                    {/* <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10">
+                        {/* WHISHLIST BUTTON START */}
+                        {/* <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10">
                         Whishlist
                         <IoMdHeartEmpty size={20} />
                     </button> */}
-                    {/* WHISHLIST BUTTON END */}
+                        {/* WHISHLIST BUTTON END */}
 
-                    <div className='mt-10'>
-                        <div className="text-lg font-bold mb-5">
-                            Course Details:
-                        </div>
-                        <div className="markdown text-md mb-5">
-                            Be cool. Stay cool. The AJ-6 &quot;&quot;Cool Grey&quot;&quot; lets your style take flight with a colourway rooted to Jordan Brand DNA. MJ wore &apos;em when he claimed his first championship and you&apos;ll be wearing &apos;em for—well, whatever you want. Laden with sleek features like dynamic design lines and an iced outsole, these sneakers bring speed and class to any &apos;fit. After all, they were famously inspired by Jordan&apos;s (wait for it) COOL sports car. So lace up and let your kicks do the rest.
+                        <div className='mt-10'>
+                            <div className="text-lg font-bold mb-5">
+                                Course Details:
+                            </div>
+                            <div className="markdown text-md mb-5">
+                                Be cool. Stay cool. The AJ-6 &quot;&quot;Cool Grey&quot;&quot; lets your style take flight with a colourway rooted to Jordan Brand DNA. MJ wore &apos;em when he claimed his first championship and you&apos;ll be wearing &apos;em for—well, whatever you want. Laden with sleek features like dynamic design lines and an iced outsole, these sneakers bring speed and class to any &apos;fit. After all, they were famously inspired by Jordan&apos;s (wait for it) COOL sports car. So lace up and let your kicks do the rest.
 
-                            <br />
-                            Colour Shown: White/Cool Grey/Medium Grey Style: CT8529-100
+                                <br />
+                                Colour Shown: White/Cool Grey/Medium Grey Style: CT8529-100
+                            </div>
                         </div>
                     </div>
+                    {/* right column end */}
                 </div>
-                {/* right column end */}
-            </div>
+            )}
 
             {/* <RelatedProducts /> */}
 
@@ -130,4 +147,4 @@ const Course = ({ params }) => {
     )
 }
 
-export default Course
+export default CourseDetails
