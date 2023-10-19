@@ -1,5 +1,5 @@
 "use client"
-import { headerLogo } from '../assets/images'
+
 import { hamburger } from '../assets/icons'
 import { navLinks } from '../constants'
 import Link from 'next/link'
@@ -37,7 +37,9 @@ const Nav = ({ cartIcon }) => {
                 <div className='flex items-center justify-center gap-2'>
 
                     {cartIcon && <div className='w-8 md:w-12 h-8 md:h-12 rounded-full hover:bg-black/[0.05] cursor-pointer flex items-center justify-center'>
-                        <BsCart className='text-[20px] md:text-[23px]' />
+                        <Link href={`/cart`}>
+                            <BsCart className='text-[20px] md:text-[23px] text-gray-700' />
+                        </Link>
                     </div>}
 
                     {/* Mobile Menu start */}

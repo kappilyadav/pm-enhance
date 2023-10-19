@@ -1,6 +1,8 @@
+import { course1 } from '@/assets/images';
 import Image from 'next/image';
 import React from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri'
+
 
 const CartItem = ({ data }) => {
 
@@ -11,7 +13,7 @@ const CartItem = ({ data }) => {
             {/* IMAGE START */}
             <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
                 <Image
-                    src={p.thumbnail.data.attributes.url}
+                    src={course1}
                     alt={p.name}
                     width={120}
                     height={120}
@@ -43,13 +45,13 @@ const CartItem = ({ data }) => {
                 </div>
 
                 <div className="flex items-center justify-between mt-4">
-                    <div className="flex items-center gap-2 md:gap-10 text-black/[0.5] text-sm md:text-md">
+                    {/* <div className="flex items-center gap-2 md:gap-10 text-black/[0.5] text-sm md:text-md">
                         <div className="flex items-center gap-1">
                             <div className="font-semibold">Size:</div>
 
                             <select className="hover:text-black">
 
-                                {p.size.data.map((item, i) => {
+                                {data.attributes.map((item, i) => {
                                     return (
                                         <option
                                             key={i}
@@ -81,7 +83,7 @@ const CartItem = ({ data }) => {
                                 })}
                             </select>
                         </div>
-                    </div>
+                    </div> */}
                     <RiDeleteBin6Line
 
                         className="cursor-pointer text-black/[0.5] hover:text-black text-[16px] md:text-[20px]"

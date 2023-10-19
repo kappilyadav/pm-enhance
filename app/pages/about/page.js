@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="min-h-[650px] flex items-center w-full max-w-[1280px] px-5 md:px-10 mx-auto">
 
-            <div className="p-5 max-sm:p-3 relative top-28 mb-44">
+            <div className="p-5 max-sm:p-3 relative top-24 mb-44">
                 <div className="text-2xl font-bold text-[28px] md:text-[34px] mb-5 text-center leading-tight">
                     About Us
                 </div>

@@ -18,13 +18,14 @@ export default function RootLayout({ children }) {
 
         <Providers>
 
-          <Nav />
+          <Nav cartIcon={true} />
 
           {children}
 
           <section className="bg-black padding-x padding-t pb-8">
             <Footer />
           </section>
+
         </Providers>
 
       </body>
