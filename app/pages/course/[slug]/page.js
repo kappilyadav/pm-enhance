@@ -2,8 +2,8 @@
 
 import { course1 } from '@/assets/images'
 import { fetchDataFromApi } from '@/utils/api'
-//import CourseDetailsCarousel from '@/components/CourseDetailsCarousel'
 import Image from 'next/image'
+import Link from 'next/link'
 //import RelatedProducts from '@/components/RelatedProducts'
 import React, { useEffect, useState } from 'react'
 
@@ -11,11 +11,9 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '@/store/cartSlice'
 
-//React-Toastify
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Link from 'next/link'
-
+// //React-Toastify
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 
 const CourseDetails = ({ params }) => {
@@ -36,18 +34,18 @@ const CourseDetails = ({ params }) => {
     }
 
 
-    const notify = () => {
-        toast.success('Success. Check your cart!', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
-    }
+    // const notify = () => {
+    //     toast.success('Success. Check your cart!', {
+    //         position: "top-right",
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: "dark",
+    //     });
+    // }
 
 
     return (
@@ -104,7 +102,7 @@ const CourseDetails = ({ params }) => {
                                         ...data.data[0]
                                     }));
 
-                                    notify();
+                                    //notify();
                                 }}
                             >
                                 Add to cart
