@@ -4,20 +4,55 @@ import { hamburger } from '../assets/icons'
 import { navLinks } from '../constants'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { VscChromeClose } from 'react-icons/vsc'
 import MenuMobile from './MenuMobile'
 import { BsCart } from 'react-icons/bs'
-
-
+import { usePathname } from 'next/navigation';
 
 const Nav = ({ cartIcon }) => {
 
+    const currentPath = usePathname();
+
+    if (currentPath == '/') {
+        cartIcon = null;
+    }
+
+
     const [mobileMenu, setMobileMenu] = useState(false);
+    const [show, setShow] = useState("translate-y-0");
+    const [lastScrollY, setlastScrollY] = useState(0);
+
+
+    const controlNavbar = () => {
+        if (window.scrollY > 200) {
+
+            if (window.scrollY > lastScrollY) {
+                setShow("-translate-y-20")
+            }
+            // else {
+            //     setShow("shadow-sm")
+            // }
+        }
+        else {
+            setShow("translate-y-0")
+        }
+
+        setlastScrollY(window.scrollY)
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", controlNavbar);
+
+        return () => {
+            window.removeEventListener("scroll", controlNavbar);
+        }
+    }, [lastScrollY])
+
 
 
     return (
-        <header className='padding-x py-8 max-lg:py-6 absolute top-0 z-10 w-full'>
+        <header className={`padding-x py-8 max-lg:py-6 absolute top-0 z-10 w-full ${show}`} >
             <nav className='flex justify-between items-center max-container'>
                 <Link href="/">
                     {/* <Image src={headerLogo} alt="Logo" height={29} width={130} /> */}
@@ -64,7 +99,7 @@ const Nav = ({ cartIcon }) => {
 
             </div>
 
-        </header>
+        </header >
     )
 }
 

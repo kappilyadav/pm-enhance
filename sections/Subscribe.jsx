@@ -1,8 +1,27 @@
 "use client"
 import Button from "../components/Button"
 
+//React-Toastify
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Subscribe = () => {
+
+    const notify = () => {
+        toast.success('Successfully. Subscribed!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+    }
+
+
     return (
         <section className="max-container flex justify-between items-center max-lg:flex-col gap-10" id="contact-us">
 
@@ -21,7 +40,7 @@ const Subscribe = () => {
 
                 <div className="flex max-sm:justify-start items-center 
                 max-sm:w-full">
-                    <Button label="Sign Up" fullWidth="" backgroundColor={"bg-black"} textColor={"text-white"} />
+                    <Button onClick={() => notify()} label="Sign Up" fullWidth="" backgroundColor={"bg-black"} textColor={"text-white"} />
                 </div>
 
             </div>

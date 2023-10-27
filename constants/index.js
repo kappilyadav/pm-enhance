@@ -55,6 +55,26 @@ export const products = [
     },
 ];
 
+export const articles = [
+    {
+        imgURL: course1,
+        name: "Scaled Scrum Master",
+        price: "$150.00",
+    },
+    {
+        imgURL: course1,
+        name: "Scrum Fundamentals Certified",
+        price: "$150.00",
+    },
+    {
+        imgURL: course1,
+        name: "Scrum Product Owner Certified",
+        price: "$150.00",
+    },
+
+];
+
+
 export const services = [
     {
         imgURL: truckFast,

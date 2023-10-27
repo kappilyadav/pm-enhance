@@ -17,10 +17,10 @@ const Hero = () => {
 
     return (
         <section id="home" className="w-full flex 
-        xl:flex-row flex-col justify-center min-h-screen 
+        lg:flex-row flex-col justify-center min-h-screen 
         gap-10 max-container">
 
-            <div className="relative lg:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-32">
+            <div className="relative xl:w-2/5 lg:w-4/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-32">
 
 
                 <h1 className="mt-3 text-[95px] font-palanquin font-bold max-sm:text-[55px] leading-[80px] max-sm:leading-[60px]">
@@ -51,7 +51,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="bg-cover lg:w-2/5 relative flex justify-end" >
+            <div className="bg-cover xl:w-2/5 lg:w-5/5 relative flex justify-end" >
 
                 <Image src={bigShoeImg} alt="Shoe collection"
                     className="object-contain lg:scale-110" />

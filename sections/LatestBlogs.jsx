@@ -1,6 +1,7 @@
 "use client"
+import Link from "next/link"
 import LatestBlogCard from "../components/LatestBlogCard"
-import { products } from "../constants"
+import { articles } from "../constants"
 
 
 const LatestBlogs = () => {
@@ -13,9 +14,11 @@ const LatestBlogs = () => {
                 <p className="lg:max-w-lg mt-2 font-montserrat text-slate-gray">Experience top-notch quality and style with our sought-after selections. Discover a world of comfort, design, and value.</p>
             </div>
 
-            <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-14">
-                {products.map((product) => (
-                    <LatestBlogCard key={product.name} {...product} />
+            <div className="mt-16 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-16">
+                {articles.map((article) => (
+                    <Link href={'/pages/article/how-do-you-change-your-personality'}>
+                        <LatestBlogCard key={article.name} {...article} />
+                    </Link>
                 ))}
             </div>
         </section>
