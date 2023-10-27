@@ -51,7 +51,7 @@ const CourseDetails = ({ params }) => {
     return (
         <div className="w-full mt-28 md:py-20 max-w-[1280px] px-5 md:px-10 mx-auto">
 
-            <ToastContainer />
+            {/* <ToastContainer /> */}
 
             {data && (
                 <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
