@@ -35,7 +35,7 @@ const Hero = () => {
 
                 <div className="mt-14 flex gap-4 max-sm:flex-col">
                     <Link href={"./courses"}><Button label="Mentorship" backgroundColor={"bg-black"} textColor={"text-white"} iconURL={arrowRight} /></Link>
-                    <Link href={"./pages/about"}><Button label="Learn more" backgroundColor={"bg-white"} /></Link>
+                    <Link href={"./pages/about"}><Button label="Who we're?" backgroundColor={"bg-white"} /></Link>
                 </div>
 
 

@@ -12,21 +12,21 @@ const About = () => {
                 <div className="text-xl font-bold mt-12">
                     Our Vision
                 </div>
-                <div className="text-base mt-7">
+                <div className="text-base mt-7 text-gray-700">
                     At PmEnhance, we envision a corporate landscape where employees are not only skilled but also empowered, where personal development is the cornerstone of professional success. We believe that nurturing the individual&apos;s character and skills leads to better leaders, innovative teams, and thriving organizations.
                 </div>
 
                 <div className="text-xl font-bold mt-12">
                     Who We Are
                 </div>
-                <div className="text-base mt-7">
+                <div className="text-base mt-7 text-gray-700">
                     We are a dedicated team of experienced coaches, trainers, and facilitators who are passionate about personal development. Our experts bring a wealth of knowledge and a diverse set of skills to help corporate employees harness their true potential.
                 </div>
 
                 <div className="text-xl font-bold mt-12">
                     What We Do
                 </div>
-                <div className="text-base mt-7">
+                <div className="text-base mt-7 text-gray-700">
                     <p>
                         At PmEnhance, we specialize in tailoring transformative programs and coaching services designed exclusively for the corporate world. We offer a comprehensive range of services, including:
                     </p>
@@ -71,7 +71,7 @@ const About = () => {
                 <div className="text-xl font-bold mt-12">
                     Why Choose Us
                 </div>
-                <div className="text-base mt-7">
+                <div className="text-base mt-7 text-gray-700">
                     <p>
                         <b>Customized Solutions:</b> We understand that each corporate environment is unique. Our programs are tailored to meet the specific needs and goals of your organization.
                     </p>
@@ -96,10 +96,10 @@ const About = () => {
                 <div className="text-xl font-bold mt-12">
                     Join Us on the Journey
                 </div>
-                <div className="text-base mt-7">
+                <div className="text-base mt-7 text-gray-700">
                     At PmEnhance, we invite you to embark on a journey of self-discovery and professional advancement. Whether you&apos;re an individual looking to enhance your skills or an organization seeking to empower your workforce, we are here to support you every step of the way.
                 </div>
-                <div className="text-base mt-5 mb-5">
+                <div className="text-base mt-5 mb-5 text-gray-700">
                     Contact us today to explore how we can work together to unlock your true potential in the corporate world.
                 </div>
 

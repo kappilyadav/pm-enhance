@@ -9,13 +9,13 @@ const Contact = () => {
                 <div className="text-2xl font-bold">
                     Do you&apos;ve any query?
                 </div>
-                <div className="text-lg font-bold mt-2">
+                <div className="text-lg font-bold mt-2 text-gray-700">
                     Your can contact us on below mentioned modes.
                 </div>
-                <div className="text-base mt-5">
+                <div className="text-base mt-5 text-gray-700">
                     For any course related query, drop us an email on
                 </div>
-                <div className="underline">contact@pmenhance.com</div>
+                <div className="underline text-gray-700">contact@pmenhance.com</div>
 
                 <Link href="/" className="font-bold mt-5">
                     Continue Shopping

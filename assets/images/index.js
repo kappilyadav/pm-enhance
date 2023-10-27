@@ -23,6 +23,7 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 
 import man from './man.png'
+import blog from './blog.jpg'
 import course1 from './course1.jpeg'
 import emptyCart from './empty-cart.jpg'
 

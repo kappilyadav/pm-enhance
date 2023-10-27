@@ -1,7 +1,7 @@
 "use client"
 
 import {
-  CustomerReviews, Footer, Hero, PopularCourses, PopularBlogs, Services,
+  CustomerReviews, Footer, Hero, PopularCourses, LatestBlogs, Services,
   SpecialOffer, OurMission, Subscribe
 } from '../sections'
 
@@ -27,9 +27,9 @@ const Home = () => (
     <section className="bg-pale-blue padding">
       <CustomerReviews />
     </section>
-    {/* <section className="padding">
-      <PopularBlogs />
-    </section> */}
+    <section className="padding">
+      <LatestBlogs />
+    </section>
     <section className="padding-x sm:py-32 py-16 w-full">
       <Subscribe />
     </section>

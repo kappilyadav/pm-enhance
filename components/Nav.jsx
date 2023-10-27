@@ -38,7 +38,7 @@ const Nav = ({ cartIcon }) => {
 
                     {cartIcon && <div className='w-8 md:w-12 h-8 md:h-12 rounded-full hover:bg-black/[0.05] cursor-pointer flex items-center justify-center'>
                         <Link href={`/cart`}>
-                            <BsCart className='text-[20px] md:text-[23px] text-gray-700' />
+                            <BsCart className='text-[20px] md:text-[23px]' />
                         </Link>
                     </div>}
 
