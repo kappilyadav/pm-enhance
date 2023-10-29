@@ -94,20 +94,20 @@ const CourseDetails = ({ params }) => {
 
 
                         {/* ADD TO CART BUTTON START */}
-                        <Link href={"/cart"}>
-                            <button
-                                className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
-                                onClick={() => {
-                                    dispatch(addToCart({
-                                        ...data.data[0]
-                                    }));
 
-                                    notify();
-                                }}
-                            >
-                                Add to cart
-                            </button>
-                        </Link>
+                        <button
+                            className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+                            onClick={() => {
+                                dispatch(addToCart({
+                                    ...data.data[0]
+                                }));
+
+                                notify();
+                            }}
+                        >
+                            Add to cart
+                        </button>
+
                         {/* ADD TO CART BUTTON END */}
 
 
