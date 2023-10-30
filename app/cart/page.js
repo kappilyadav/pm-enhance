@@ -16,6 +16,7 @@ const Cart = () => {
 
     return (
         <div className="lg:py-36 md:py-28 py-16 w-full max-w-[1280px] px-5 md:px-10 mx-auto" >
+
             {cartItems.length > 0 && (
                 <>
                     {/* HEADING AND PARAGRAPH START */}
@@ -34,9 +35,11 @@ const Cart = () => {
                                 Cart Items
                             </div>
 
+
                             {cartItems.map((item) => (
                                 <CartItem key={item.id} data={item} />
                             ))}
+
                         </div>
                         {/* CART ITEMS END */}
 

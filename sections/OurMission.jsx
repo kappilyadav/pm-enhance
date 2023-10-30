@@ -36,21 +36,21 @@ const OurMission = () => {
                     width={570} height={522}
                     className="object-contain" /> */}
 
-                <div className="my-3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
+                <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
                     <p className="text-md">Personality Development</p>
                 </div>
-                <div className="my-3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
+                <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
-                    <p className="text-md">Personality Development</p>
+                    <p className="text-md">Communication Training</p>
                 </div>
-                <div className="my-3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
+                <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
-                    <p className="text-md">Personality Development</p>
+                    <p className="text-md">Personal Branding</p>
                 </div>
-                <div className="my-3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
+                <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
-                    <p className="text-md">Personality Development</p>
+                    <p className="text-md">Feedback and Evaluation</p>
                 </div>
 
             </div>

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { Footer } from '@/sections'
 import { Providers } from '@/store/provider'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -14,6 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
       <body className={inter.className}>
 
         <Providers>
@@ -28,6 +30,8 @@ export default function RootLayout({ children }) {
 
         </Providers>
 
+
+        <script src="//code.tidio.co/8pzv0sjjos9gpw6adbfo7vrpwutrfd8d.js" async></script>
       </body>
     </html>
   )

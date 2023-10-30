@@ -18,7 +18,7 @@ const LatestBlogs = () => {
 
             <div className="lg:mt-11 mt-6"><Link href="/articles"><Button label="Explore All" backgroundColor={"bg-black"} textColor={"text-white"} /></Link></div>
 
-            <div className="mt-16 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-16">
+            <div className="mt-16 grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-16">
                 {articles.map((article) => (
                     <Link href={'/pages/article/how-do-you-change-your-personality'}>
                         <LatestBlogCard key={article.name} {...article} />
