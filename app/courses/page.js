@@ -12,6 +12,8 @@ const Courses = () => {
 
     useEffect(() => {
         fetchCourses();
+
+        window.scrollTo(0, 0);
     }, [])
 
 

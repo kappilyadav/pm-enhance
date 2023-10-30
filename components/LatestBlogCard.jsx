@@ -7,7 +7,7 @@ import article from "../assets/images/article.webp"
 import Image from "next/image"
 
 
-const LatestBlogCard = ({ imgURL, name, price }) => {
+const LatestBlogCard = ({ data }) => {
     return (
         // <div className="flex flex-1 flex-col w-full max-sm:w-full justify-center items-center rounded-sm border">
         //     <Image src={article} width={1000} height={500} alt={name}
@@ -25,8 +25,8 @@ const LatestBlogCard = ({ imgURL, name, price }) => {
         <div className='bg-white rounded-xl overflow-hidden drop-shadow-sm mr-4'>
             <Image className='h-56 w-full object-cover' src={article} />
             <div className='p-4'>
-                <h3 className='font-montserrat font-bold text-xl my-1'>{'How do you change your personality'}</h3>
-                <p className='font-palanquin text-gray-600 text-lg'>{'blog.attributes.blogTitle'}</p>
+                <h3 className='font-montserrat font-bold text-xl my-1'>{data.attributes.title}</h3>
+                <p className='font-palanquin text-gray-600 text-lg'>{data.attributes.description}</p>
             </div>
         </div>
     )

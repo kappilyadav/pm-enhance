@@ -1,13 +1,14 @@
 "use client"
 
+import { course1 } from "@/assets/images"
 import { star } from "../assets/icons"
 import Image from "next/image"
 
 
-const PopularCourseCard = ({ imgURL, name, price }) => {
+const PopularCourseCard = ({ data }) => {
     return (
         <div className="flex flex-1 flex-col w-full max-sm:w-full">
-            <Image src={imgURL} width={''} height={''} alt={name}
+            <Image src={course1} width={''} height={''} alt={data.attributes.name}
                 className="w-[280px] h-[280px] sm:h-auto sm:mt-8 md:hover:scale-105 md:duration-300 cursor-pointer" />
 
             <div className="mt-8 flex justify-start gap-2.5">
@@ -15,8 +16,8 @@ const PopularCourseCard = ({ imgURL, name, price }) => {
                 <p className="font-montserrat text-xl leading-normal text-slate-gray">(4.5)</p>
             </div>
 
-            <h3 className="mt-2 text-2xl leading-normal font-semibold font-palanquin">{name}</h3>
-            <p className="mt-2 font-semibold font-montserrat text-coral-red text-2xl leading-normal">{price}</p>
+            <h3 className="mt-2 text-2xl leading-normal font-semibold font-palanquin">{data.attributes.name}</h3>
+            <p className="mt-2 font-semibold font-montserrat text-coral-red text-2xl leading-normal">{data.attributes.price}</p>
         </div >
     )
 }

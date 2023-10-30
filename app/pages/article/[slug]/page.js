@@ -27,6 +27,7 @@ const CourseDetails = ({ params }) => {
 
     useEffect(() => {
         fetchArticleDetails();
+        window.scrollTo(0, 0);
     }, [])
 
 
@@ -39,7 +40,7 @@ const CourseDetails = ({ params }) => {
 
     const notify = () => {
         toast.success('Success. Check your cart!', {
-            position: "top-right",
+            position: "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,

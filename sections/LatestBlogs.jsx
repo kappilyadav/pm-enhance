@@ -3,10 +3,25 @@ import Link from "next/link"
 import LatestBlogCard from "../components/LatestBlogCard"
 import { articles } from "../constants"
 import Button from "@/components/Button"
+import { fetchDataFromApi } from "@/utils/api"
+import { useEffect, useState } from "react"
 
 
 
 const LatestBlogs = () => {
+
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchBlogs();
+    }, [])
+
+    const fetchBlogs = async () => {
+        const blogs = await fetchDataFromApi(`/api/blogs?populate=*`);
+
+        setData({ ...blogs });
+    }
+
     return (
         <section className="max-container max-sm:mt-12">
 
@@ -19,9 +34,19 @@ const LatestBlogs = () => {
             <div className="lg:mt-11 mt-6"><Link href="/articles"><Button label="Explore All" backgroundColor={"bg-black"} textColor={"text-white"} /></Link></div>
 
             <div className="mt-16 grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-16">
-                {articles.map((article) => (
-                    <Link href={'/pages/article/how-do-you-change-your-personality'}>
-                        <LatestBlogCard key={article.name} {...article} />
+                {data?.data.map((article) => (
+                    <Link href={`/pages/article/${article.attributes.slug}`}>
+                        <LatestBlogCard key={article.id} data={article} />
+                    </Link>
+                ))}
+                {data?.data.map((article) => (
+                    <Link href={`/pages/article/${article.attributes.slug}`}>
+                        <LatestBlogCard key={article.id} data={article} />
+                    </Link>
+                ))}
+                {data?.data.map((article) => (
+                    <Link href={`/pages/article/${article.attributes.slug}`}>
+                        <LatestBlogCard key={article.id} data={article} />
                     </Link>
                 ))}
             </div>

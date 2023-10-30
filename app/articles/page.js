@@ -4,23 +4,25 @@ import CourseCard from '@/components/CourseCard'
 import LatestBlogCard from '@/components/LatestBlogCard'
 import { articles } from '@/constants'
 import { fetchDataFromApi } from '@/utils/api'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 
 
-const Courses = () => {
+const Articles = () => {
 
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetchCourses();
+        fetchArticles();
+        window.scrollTo(0, 0);
     }, [])
 
 
-    const fetchCourses = async () => {
-        const courses = await fetchDataFromApi(`/api/courses?populate=*`);
+    const fetchArticles = async () => {
+        const articles = await fetchDataFromApi(`/api/blogs?populate=*`);
 
-        setData({ ...courses });
+        setData({ ...articles });
     }
 
 
@@ -35,11 +37,15 @@ const Courses = () => {
             {/* products grid start */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-14 px-5 md:px-0">
 
-                {articles.map((article) => (
-                    <LatestBlogCard key={article.name} {...article} />
+                {data?.data.map((article) => (
+                    <Link href={`/pages/article/${article.attributes.slug}`} key={article.id}>
+                        <LatestBlogCard data={article} />
+                    </Link>
                 ))}
-                {articles.map((article) => (
-                    <LatestBlogCard key={article.name} {...article} />
+                {data?.data.map((article) => (
+                    <Link href={`/pages/article/${article.attributes.slug}`} key={article.id}>
+                        <LatestBlogCard data={article} />
+                    </Link>
                 ))}
 
             </div>
@@ -48,4 +54,4 @@ const Courses = () => {
     )
 }
 
-export default Courses
+export default Articles
