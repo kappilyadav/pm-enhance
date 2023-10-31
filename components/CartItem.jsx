@@ -1,19 +1,26 @@
 import { course1 } from '@/assets/images';
+import { removeFromCart } from '@/store/cartSlice';
 import Image from 'next/image';
 import React from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri'
+import { useDispatch } from 'react-redux';
+
 
 
 const CartItem = ({ data }) => {
 
+    const dispatch = useDispatch();
     const p = data.attributes;
+
+    // p.image.data.attributes.formats.thumbnail.url
+
 
     return (
         <div className="flex py-5 gap-3 md:gap-5 border-b">
             {/* IMAGE START */}
             <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
                 {data && <Image
-                    src={p.image.data.attributes.formats.thumbnail.url}
+                    src={course1}
                     alt={p.name}
                     width={120}
                     height={120}
@@ -31,7 +38,7 @@ const CartItem = ({ data }) => {
 
                     {/* PRODUCT PRICE */}
                     <div className="text-sm md:text-md font-bold text-black/[0.5] mt-2">
-                        MRP : &#8377;{p.price}
+                        MRP : &#36;{p.price}
                     </div>
                 </div>
 
@@ -78,6 +85,7 @@ const CartItem = ({ data }) => {
                     </div> */}
 
                     <RiDeleteBin6Line
+                        onClick={() => dispatch(removeFromCart({ id: data.id }))}
                         className="cursor-pointer text-black/[0.5] hover:md:text-black text-[16px] max-md:text-[24px] md:text-[20px]"
                     />
                 </div>

@@ -4,15 +4,19 @@ import { emptyCart } from '@/assets/images'
 import CartItem from '@/components/CartItem'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import { useSelector } from 'react-redux';
+
 
 
 const Cart = () => {
 
     const { cartItems } = useSelector((state => state.cart));
 
+    const subtotal = useMemo(() => {
+        return cartItems.reduce((total, val) => total + val.attributes.price, 0)
+    }, [cartItems]);
 
     return (
         <div className="lg:py-36 md:py-28 py-16 w-full max-w-[1280px] px-5 md:px-10 mx-auto" >
@@ -53,7 +57,7 @@ const Cart = () => {
                                         Subtotal
                                     </div>
                                     <div className="text-md md:text-lg font-medium text-black">
-                                        &#8377;19 546.00
+                                        &#36;{subtotal}
                                     </div>
                                 </div>
                                 <div className="text-sm md:text-md py-5 border-t mt-5">
