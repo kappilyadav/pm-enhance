@@ -5,7 +5,6 @@ import {
   SpecialOffer, OurMission, Subscribe
 } from '../sections'
 
-import Nav from '../components/Nav'
 
 const Home = () => (
   <main className="relative">

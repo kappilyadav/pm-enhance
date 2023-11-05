@@ -1,22 +1,48 @@
 "use client"
 
 import { emptyCart } from '@/assets/images'
+import spinner from '@/assets/icons/spinner.svg'
 import CartItem from '@/components/CartItem'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import { useSelector } from 'react-redux';
 
+import { makePaymentRequest } from '@/utils/api'
+import { loadStripe } from "@stripe/stripe-js";
+const stripePromise = loadStripe(
+    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+);
 
 
 const Cart = () => {
 
+    const [loading, setLoading] = useState(false);
     const { cartItems } = useSelector((state => state.cart));
 
     const subtotal = useMemo(() => {
         return cartItems.reduce((total, val) => total + val.attributes.price, 0)
     }, [cartItems]);
+
+
+    const handlePayment = async () => {
+        try {
+            setLoading(true);
+            const stripe = await stripePromise;
+            const res = await makePaymentRequest("/api/orders", {
+                products: cartItems,
+            });
+            await stripe.redirectToCheckout({
+                sessionId: res.stripeSession.id,
+            });
+        } catch (error) {
+            setLoading(false);
+            console.log(error);
+        }
+    };
+
+
 
     return (
         <div className="lg:py-36 md:py-28 py-16 w-full max-w-[1280px] px-5 md:px-10 mx-auto" >
@@ -72,9 +98,10 @@ const Cart = () => {
                             {/* BUTTON START */}
                             <button
                                 className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
-
+                                onClick={handlePayment}
                             >
                                 Checkout
+                                {loading && <Image width={25} height={25} src={spinner} alt='loader' />}
 
                             </button>
                             {/* BUTTON END */}
@@ -83,34 +110,37 @@ const Cart = () => {
                     </div>
                     {/* CART CONTENT END */}
                 </>
-            )}
+            )
+            }
 
 
             {/* This is empty screen */}
-            {cartItems.length < 1 && (
-                <div className="flex-[2] flex flex-col items-center pb-[50px] md:-mt-0">
-                    <Image
-                        src={emptyCart}
-                        width={300}
-                        height={300}
-                        className="w-[300px] md:w-[400px]"
-                    />
-                    <span className="text-xl font-bold">
-                        Your cart is empty
-                    </span>
-                    <span className="text-center mt-4">
-                        Looks like you have not added anything in your cart.
-                        <br />
-                        Go ahead and explore top categories.
-                    </span>
-                    <Link
-                        href="/courses"
-                        className="py-4 px-8 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 mt-8"
-                    >
-                        Continue Exploring
-                    </Link>
-                </div>
-            )}
+            {
+                cartItems.length < 1 && (
+                    <div className="flex-[2] flex flex-col items-center pb-[50px] md:-mt-0">
+                        <Image
+                            src={emptyCart}
+                            width={300}
+                            height={300}
+                            className="w-[300px] md:w-[400px]"
+                        />
+                        <span className="text-xl font-bold">
+                            Your cart is empty
+                        </span>
+                        <span className="text-center mt-4">
+                            Looks like you have not added anything in your cart.
+                            <br />
+                            Go ahead and explore top categories.
+                        </span>
+                        <Link
+                            href="/courses"
+                            className="py-4 px-8 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 mt-8"
+                        >
+                            Continue Exploring
+                        </Link>
+                    </div>
+                )
+            }
         </div >
     )
 }
