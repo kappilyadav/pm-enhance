@@ -22,7 +22,7 @@ const LatestBlogCard = ({ data }) => {
         //     {/* <p className="mt-2 font-semibold font-montserrat text-coral-red text-2xl leading-normal">{price}</p> */}
         // </div >
 
-        <div className='bg-white rounded-xl overflow-hidden drop-shadow-sm mr-4'>
+        <div className='bg-white rounded-xl overflow-hidden drop-shadow-sm mr-4 md:hover:scale-105 md:duration-300'>
             <Image className='h-56 w-full object-cover' src={article} />
             <div className='p-4'>
                 <h3 className='font-montserrat font-bold text-xl my-1'>{data.attributes.title}</h3>

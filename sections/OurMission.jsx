@@ -38,19 +38,19 @@ const OurMission = () => {
 
                 <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
-                    <p className="text-md">Personality Development</p>
+                    <p className="w-2/3 text-md">Personality Development</p>
                 </div>
                 <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
-                    <p className="text-md">Communication Training</p>
+                    <p className="w-2/3 text-md">Communication Training</p>
                 </div>
                 <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
-                    <p className="text-md">Personal Branding</p>
+                    <p className="w-2/3 text-md">Personal Branding</p>
                 </div>
                 <div className="my-3 w-2/3 flex items-center gap-3 border border-black px-16 py-5 rounded-full md:hover:scale-105 duration-300">
                     <BsPatchCheckFill className="text-3xl" />
-                    <p className="text-md">Feedback and Evaluation</p>
+                    <p className="w-2/3 text-md">Feedback and Evaluation</p>
                 </div>
 
             </div>
