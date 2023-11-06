@@ -8,7 +8,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 //Redux
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '@/store/cartSlice'
 
 //React-Toastify
@@ -16,7 +16,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 const CourseDetails = ({ params }) => {
+
+    const { cartItems } = useSelector((state => state.cart));
 
     const dispatch = useDispatch();
 
@@ -97,9 +100,10 @@ const CourseDetails = ({ params }) => {
 
                         {/* ADD TO CART BUTTON START */}
 
-                        <button
+                        {cartItems.length < 1 ? (<button
                             className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
                             onClick={() => {
+                                console.log(cartItems);
                                 dispatch(addToCart({
                                     ...data.data[0]
                                 }));
@@ -108,7 +112,16 @@ const CourseDetails = ({ params }) => {
                             }}
                         >
                             Add to cart
-                        </button>
+                        </button>)
+                            :
+                            (<Link href={'../../cart'}>
+                                <button
+                                    className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+                                >
+                                    Go to cart
+                                </button>
+                            </Link>)
+                        }
 
                         {/* ADD TO CART BUTTON END */}
 
