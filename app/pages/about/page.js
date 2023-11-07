@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import vision from "@/assets/images/vision.webp"
+import vision from "@/assets/images/vision.webp";
 import Image from "next/image";
+
 
 const About = () => {
     return (
@@ -11,24 +12,29 @@ const About = () => {
                 <div className="text-2xl font-bold text-[28px] md:text-[34px] mb-5 text-center leading-tight">
                     About Us
                 </div>
-                <div>
-                    <div className="text-xl font-bold mt-12">
-                        Our Vision
+
+                <div className="flex md:gap-6 mt-12 max-sm:flex-col">
+                    <div>
+                        <div className="text-xl font-bold">
+                            Our Vision
+                        </div>
+                        <div className="text-base mt-7 text-gray-700">
+                            At PmEnhance, we envision a corporate landscape where employees are not only skilled but also empowered, where personal development is the cornerstone of professional success. We believe that nurturing the individual&apos;s character and skills leads to better leaders, innovative teams, and thriving organizations.
+                        </div>
                     </div>
-                    <div className="text-base mt-7 text-gray-700">
-                        At PmEnhance, we envision a corporate landscape where employees are not only skilled but also empowered, where personal development is the cornerstone of professional success. We believe that nurturing the individual&apos;s character and skills leads to better leaders, innovative teams, and thriving organizations.
-                    </div>
-                    <Image className="w-full mt-7" src={vision} height={300} width={300} />
+                    <Image className="w-72 max-sm:w-full max-sm:mt-7 rounded-md" src={vision} height={300} width={300} />
                 </div>
 
-                <div>
-                    <div className="text-xl font-bold mt-12">
-                        Who We Are
+                <div className="flex md:gap-8 md:mt-16 max-sm:flex-col-reverse">
+                    <Image className="w-72 max-sm:w-full max-sm:mt-7 rounded-md" src={vision} height={300} width={300} />
+                    <div>
+                        <div className="text-xl font-bold max-sm:mt-12">
+                            Who We Are
+                        </div>
+                        <div className="text-base mt-7 text-gray-700">
+                            We are a dedicated team of experienced coaches, trainers, and facilitators who are passionate about personal development. Our experts bring a wealth of knowledge and a diverse set of skills to help corporate employees harness their true potential.
+                        </div>
                     </div>
-                    <div className="text-base mt-7 text-gray-700">
-                        We are a dedicated team of experienced coaches, trainers, and facilitators who are passionate about personal development. Our experts bring a wealth of knowledge and a diverse set of skills to help corporate employees harness their true potential.
-                    </div>
-                    <Image className="w-full mt-7" src={vision} height={300} width={300} />
                 </div>
 
                 <div>
@@ -56,7 +62,7 @@ const About = () => {
                         </p>
 
                         <br />
-                        <Image className="w-full mt-5 mb-10" src={vision} height={300} width={300} />
+                        <Image className="w-full mt-5 mb-10 rounded-md" src={vision} height={300} width={300} />
                         <p>
                             <b>Conflict Resolution:</b> Training sessions to equip employees with conflict resolution skills, promoting a harmonious work environment.
                         </p>
@@ -76,33 +82,35 @@ const About = () => {
                             <b>Career Advancement:</b> Guiding employees toward career progression through goal-setting and skill development.
                         </p>
                     </div>
-                    <Image className="w-full mt-7" src={vision} height={300} width={300} />
                 </div>
 
 
-                <div>
-                    <div className="text-xl font-bold mt-12">
-                        Why Choose Us
-                    </div>
-                    <div className="text-base mt-7 text-gray-700">
-                        <p>
-                            <b>Customized Solutions:</b> We understand that each corporate environment is unique. Our programs are tailored to meet the specific needs and goals of your organization.
-                        </p>
+                <div >
+                    <Image className="w-full mt-7 rounded-md" src={vision} height={300} width={300} />
+                    <div>
+                        <div className="text-xl font-bold mt-12">
+                            Why Choose Us
+                        </div>
+                        <div className="text-base mt-7 text-gray-700">
+                            <p>
+                                <b>Customized Solutions:</b> We understand that each corporate environment is unique. Our programs are tailored to meet the specific needs and goals of your organization.
+                            </p>
 
-                        <br />
-                        <p>
-                            <b>Experienced Team:</b> Our team of seasoned professionals brings years of experience and expertise to guide you on your personal and professional journey.
-                        </p>
+                            <br />
+                            <p>
+                                <b>Experienced Team:</b> Our team of seasoned professionals brings years of experience and expertise to guide you on your personal and professional journey.
+                            </p>
 
-                        <br />
-                        <p>
-                            <b>Proven Results:</b> We measure our success by the success of our clients. Many corporate professionals have transformed their careers and lives with our guidance.
-                        </p>
+                            <br />
+                            <p>
+                                <b>Proven Results:</b> We measure our success by the success of our clients. Many corporate professionals have transformed their careers and lives with our guidance.
+                            </p>
 
-                        <br />
-                        <p>
-                            <b>Commitment to Excellence:</b> We are committed to fostering a culture of excellence, growth, and continuous improvement.
-                        </p>
+                            <br />
+                            <p>
+                                <b>Commitment to Excellence:</b> We are committed to fostering a culture of excellence, growth, and continuous improvement.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
